@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity
         final Livro[][] livros = new Livro[1][];
 
         AsyncHttpClient asyncHttpClient = new AsyncHttpClient();
-        asyncHttpClient.get("https://raw.githubusercontent.com/letthaa/biblioteca/893d2db1e31be111a8d3bb52223544257725315c/livros.json",
+        asyncHttpClient.get("https://raw.githubusercontent.com/letthaa/biblioteca/master/livros.json",
                 new TextHttpResponseHandler()
                 {
                     @Override
