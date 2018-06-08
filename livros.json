@@ -6,5 +6,21 @@
     "anoLancamento": "2016",
     "descricao": "Modelo OSI",
     "curso": "Engenharia de Software"
+  },
+  {
+    "titulo": "A",
+    "autor": "Marco Câmara",
+    "edicao": "1",
+    "anoLancamento": "2016",
+    "descricao": "A",
+    "curso": "Engenharia de Software"
+  },
+  {
+    "titulo": "B",
+    "autor": "Marco Câmara",
+    "edicao": "1",
+    "anoLancamento": "2016",
+    "descricao": "B",
+    "curso": "Direito"
   }
 ]

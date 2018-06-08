@@ -13,18 +13,21 @@ public class Livro implements Serializable {
     private Integer edicao;
     private Integer anoLancamento;
     private String descricao;
+    private String curso;
+
 
     @Override
     public String toString() {
         return titulo;
     }
 
-    public Livro(String titulo, String autor, Integer edicao, Integer anoLancamento, String descricao) {
+    public Livro(String titulo, String autor, Integer edicao, Integer anoLancamento, String descricao, String curso) {
         this.titulo = titulo;
         this.autor = autor;
         this.edicao = edicao;
         this.anoLancamento = anoLancamento;
         this.descricao = descricao;
+        this.curso = curso;
     }
 
     public String getTitulo() {
@@ -65,5 +68,13 @@ public class Livro implements Serializable {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public String getCurso() {
+        return curso;
+    }
+
+    public void setCurso(String curso) {
+        this.curso = curso;
     }
 }

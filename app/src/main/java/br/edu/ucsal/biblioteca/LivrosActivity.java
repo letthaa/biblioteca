@@ -11,25 +11,18 @@ import android.widget.ListView;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class LivrosActivity extends AppCompatActivity {
+public class LivrosActivity extends AppCompatActivity
+{
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_livros);
 
         ListView listView = (ListView) this.findViewById(R.id.listLivros);
 
-        final ArrayList<Livro> livros = new ArrayList<>();
-
-        Livro livro = new Livro("Redes de Computadores", "Marco Câmara", 1, 1, "Melhor livro");
-
-        livros.add(livro);
-//        livros.add("Sistemas Operacionais Modernos");
-//        livros.add("Sistemas Operacionais: Projeto e Implementação");
-//        livros.add("Organização Estruturada de Computadores");
-//        livros.add("Sistemas Distribuídos: Princípios e Paradigmas");
-//        livros.add("Engenharia de Software");
+        final Livro[] livros = (Livro[]) getIntent().getSerializableExtra("livros");
 
         final ArrayAdapter<Livro> adapter = new ArrayAdapter<Livro>(
                 this,
@@ -39,12 +32,14 @@ public class LivrosActivity extends AppCompatActivity {
 
         listView.setAdapter(adapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l)
+            {
                 {
                     Intent detalheActivity = new Intent(LivrosActivity.this, DetalheActivity.class);
-                    detalheActivity.putExtra("Livro", (Serializable) livros.get(i));
+                    detalheActivity.putExtra("Livro", livros[i]);
                     startActivity(detalheActivity);
                 }
             }

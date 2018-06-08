@@ -1,8 +1,7 @@
 package br.edu.ucsal.biblioteca;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 public class DetalheActivity extends AppCompatActivity {
@@ -11,11 +10,11 @@ public class DetalheActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalhe);
-        TextView titulo = findViewById(R.id.titulo);
-        TextView autor = findViewById(R.id.autor);
-        TextView edicao = findViewById(R.id.edicao);
-        TextView anoLancamento = findViewById(R.id.anoLancamento);
-        TextView descricao = findViewById(R.id.descricao);
+        TextView titulo = (TextView) findViewById(R.id.titulo);
+        TextView autor = (TextView) findViewById(R.id.autor);
+        TextView edicao = (TextView) findViewById(R.id.edicao);
+        TextView anoLancamento = (TextView) findViewById(R.id.anoLancamento);
+        TextView descricao = (TextView) findViewById(R.id.descricao);
 
         Livro livro = (Livro) getIntent().getSerializableExtra("Livro");
 
