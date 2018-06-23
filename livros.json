@@ -1,51 +1,26 @@
 [
   {
-    "titulo": "Desenvolvimento de Aplicativos Android para Leigos",
-    "autor": "Eveline Vieira Machado",
-    "edicao": "2",
-    "anoLancamento": "2014",
-    "descricao": "Com Desenvolvimento de Aplicativos Android Para Leigos, a sua boa ideia de aplicativo Android se tornará realidade!",
-    "curso": "Engenharia de Software"
-  },
-  {
     "titulo": "Redes de Computadores",
-    "autor": "Andrew Stuart Tanenbaum",
-    "edicao": "5",
-    "anoLancamento": "2011",
-    "descricao": "Este clássico best-seller foi totalmente atualizado e passa a abordar as redes desenvolvidas a partir de 1990. Entretanto, há partir do ano 2000 também há uma grande quantidade de novos desenvolvimentos. O mais importante é o enorme crescimento das redes sem fio, incluindo 802.11, loops locais sem fio, redes celulares 2G e 3G, Bluetooth, WAP, i-mode e outras. Acompanhando essa tendência, incluímos neste volume uma grande quantidade de material sobre redes sem fio. Outro tópico que se tornou importante recentemente é a segurança; assim, foi acrescentado um capítulo inteiro sobre esse assunto.",
+    "autor": "Marco Câmara",
+    "edicao": "1",
+    "anoLancamento": "2016",
+    "descricao": "Modelo OSI",
     "curso": "Engenharia de Software"
   },
   {
-    "titulo": "Direito Civil Brasileiro",
-    "autor": "Carlos Roberto Gonçalves",
-    "edicao": "3",
-    "anoLancamento": "2004",
-    "descricao": "comenta nesta coleção as inovações advindas com o Código Civil de 2002, demonstrando a evolução do direito civil brasileiro e analisando com visão crítica as questões mais atuais",
-    "curso": "Direito"
-  },
-  {
-    "titulo": "Direito das Obrigações",
-    "autor": "Natasha Garcia",
+    "titulo": "A",
+    "autor": "Marco Câmara",
     "edicao": "1",
-    "anoLancamento": "2018",
-    "descricao": "As obrigações podem ser conceituadas como relações jurídicas estabelecidas de forma transitória pelo sujeito ativo (credor) e pelo sujeito passivo (devedor), tendo como objeto uma prestação econômica que pode ser positiva (obrigações de dar e de fazer) ou negativa (obrigação de não fazer) e que se inadimplida terá como garantia o patrimônio do devedor.",
-    "curso": "Direito"
+    "anoLancamento": "2016",
+    "descricao": "A",
+    "curso": "Engenharia de Software"
   },
   {
-    "titulo": "Geologia de Engenharia",
-    "autor": "Nivaldo Chiossi",
-    "edicao": "3",
-    "anoLancamento": "2015",
-    "descricao": "De autoria de Nivaldo Chiossi, buscou-se nesta nova edição a atualização de diversos tópicos e o acréscimo de capítulos os quais o autor considera importantíssimos para os estudantes da área de Engenharia Civil",
-    "curso": "Engenharia Civil"
-  },
-  {
-    "titulo": "Canteiro de Obras",
-    "autor": "Eduardo Linhares Qualharini",
+    "titulo": "B",
+    "autor": "Marco Câmara",
     "edicao": "1",
-    "anoLancamento": "2017",
-    "descricao": "A construção civil possui múltiplas interfaces, ferramentas e técnicas. Para uma obra, o alinhamento entre estes elementos é imprescindível para o sucesso do empreendimento. Porém, o caminho a percorrer até a entrega demanda atividades constantes de profissionais do setor",
-    "curso": "Engenharia Civil"
+    "anoLancamento": "2016",
+    "descricao": "B",
+    "curso": "Direito"
   }
-  
 ]

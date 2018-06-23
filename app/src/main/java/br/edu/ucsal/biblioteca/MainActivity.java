@@ -18,34 +18,31 @@ import java.util.HashSet;
 
 import cz.msebera.android.httpclient.Header;
 
-public class MainActivity extends AppCompatActivity
-{
+public class MainActivity extends AppCompatActivity {
+
+    Livro[] livros;
+    HashSet<String> cursos;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         final ListView listView = (ListView) this.findViewById(R.id.listCursos);
-        final Livro[][] livros = new Livro[1][];
+
 
         AsyncHttpClient asyncHttpClient = new AsyncHttpClient();
         asyncHttpClient.get("https://raw.githubusercontent.com/letthaa/biblioteca/master/livros.json",
-                new TextHttpResponseHandler()
-                {
+                new TextHttpResponseHandler() {
                     @Override
-                    public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable)
-                    {
-                        // FODA- SE ESSA DISGRASSA PORRA
-                        Log.d("PORRA", "DISGRASSA");
+                    public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
                     }
 
                     @Override
-                    public void onSuccess(int statusCode, Header[] headers, String responseString)
-                    {
-                        livros[0] = new Gson().fromJson(responseString, Livro[].class);
-                        final HashSet<String> cursos = getCursos(livros[0]);
+                    public void onSuccess(int statusCode, Header[] headers, String responseString) {
+                        livros = new Gson().fromJson(responseString, Livro[].class);
+
+                        cursos = getCursos(livros);
 
                         final ArrayAdapter<String> adapter = new ArrayAdapter<>(
                                 MainActivity.this,
@@ -53,19 +50,21 @@ public class MainActivity extends AppCompatActivity
                                 cursos.toArray(new String[0])
                         );
                         listView.setAdapter(adapter);
-                        Log.d("PORRA", "TOMA NO CU");
                     }
                 }
         );
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
-        {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l)
-            {
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 {
+                    String curso = cursos.toArray(new String[0])[i];
                     Intent livrosActivity = new Intent(MainActivity.this, LivrosActivity.class);
-                    livrosActivity.putExtra("livros", livros[0]);
+                    ArrayList<Livro> livrosList = new ArrayList<>();
+                    for (Livro livro : livros)
+                        if (livro.getCurso().equals(curso))
+                            livrosList.add(livro);
+                    livrosActivity.putExtra("livros", livrosList.toArray(new Livro[0]));
                     startActivity(livrosActivity);
                 }
             }
@@ -73,11 +72,9 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    private HashSet<String> getCursos(Livro[] livros)
-    {
+    private HashSet<String> getCursos(Livro[] livros) {
         HashSet<String> cursos = new HashSet<>();
-        for (Livro livro : livros)
-        {
+        for (Livro livro : livros) {
             cursos.add(livro.getCurso());
         }
         return cursos;

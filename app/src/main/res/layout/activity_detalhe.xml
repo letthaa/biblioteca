@@ -10,40 +10,28 @@
     <TextView
         android:id="@+id/titulo"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:text="titulo"
         android:textAlignment="center" />
 
     <TextView
         android:id="@+id/autor"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:text="autor"
-        android:textAlignment="center" />
-
-    <TextView
-        android:id="@+id/edicao"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:text="edicao"
         android:textAlignment="center" />
 
     <TextView
         android:id="@+id/anoLancamento"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:text="anoLancamento"
         android:textAlignment="center" />
 
     <TextView
         android:id="@+id/descricao"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_height="wrap_content"
         android:text="descricao"
         android:textAlignment="center" />
 

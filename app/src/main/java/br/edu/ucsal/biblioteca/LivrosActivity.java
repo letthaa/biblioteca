@@ -8,15 +8,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.io.Serializable;
-import java.util.ArrayList;
 
-public class LivrosActivity extends AppCompatActivity
-{
+public class LivrosActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_livros);
 
@@ -32,11 +28,9 @@ public class LivrosActivity extends AppCompatActivity
 
         listView.setAdapter(adapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
-        {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l)
-            {
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 {
                     Intent detalheActivity = new Intent(LivrosActivity.this, DetalheActivity.class);
                     detalheActivity.putExtra("Livro", livros[i]);

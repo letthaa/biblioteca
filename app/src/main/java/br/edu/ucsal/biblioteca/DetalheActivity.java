@@ -12,7 +12,6 @@ public class DetalheActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detalhe);
         TextView titulo = (TextView) findViewById(R.id.titulo);
         TextView autor = (TextView) findViewById(R.id.autor);
-        TextView edicao = (TextView) findViewById(R.id.edicao);
         TextView anoLancamento = (TextView) findViewById(R.id.anoLancamento);
         TextView descricao = (TextView) findViewById(R.id.descricao);
 
@@ -20,7 +19,6 @@ public class DetalheActivity extends AppCompatActivity {
 
         titulo.setText(livro.getTitulo());
         autor.setText(livro.getAutor());
-        edicao.setText(livro.getEdicao().toString());
         anoLancamento.setText(livro.getAnoLancamento().toString());
         descricao.setText(livro.getDescricao());
 
